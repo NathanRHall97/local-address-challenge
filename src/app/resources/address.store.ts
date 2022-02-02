@@ -40,6 +40,10 @@ export class AddressStore {
            .sort((a,b) => a.lastName > b.lastName ? 1 : -1);
 
            this.addressBookUpdated.emit();
+       },
+       () => {
+           this._addressBook = [];
+           this.addressBookUpdated.emit();
        });
     }
 

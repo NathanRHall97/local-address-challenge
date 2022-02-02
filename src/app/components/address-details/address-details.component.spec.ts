@@ -22,10 +22,19 @@ describe('AddressDetailsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AddressDetailsComponent);
     component = fixture.componentInstance;
+    TestBed.inject(AddressStore);
+
+    component.addressDetails = {
+      title: 'Test',
+      firstName: 'Nate',
+      lastName: 'Hall',
+      phoneNo: '412-222-2222'
+    };
+
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+   it('should create', () => {
+     expect(component).toBeTruthy();
+   });
 });
