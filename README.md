@@ -1,27 +1,34 @@
-# LocalAddressChallenge
+## Address Book Component
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
+Created by Nathan R. Hall 2/1/22
 
-## Development server
+### Deployment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Run `ng build` or `ng build --prod`
+2. Copy files from `dist/` and add to your server library
 
-## Code scaffolding
+### Running
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Git clone from github
+2. Run `NPM Install`
+3. Run `ng serve`
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Summary
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+My overall approach taken for this assingnment was to create an easy to read scalable solution that myself or other devs can easily build upon.
 
-## Further help
+### Functionality Added:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- App Routing and Navigation
+- Address Book loaded from API
+- API Data Transformation
+- API Event System
+- Filtering Address Book W/ Form Input
+
+Given more time I would have liked to add some general styling across the site to make it look less HTMLish. I would probably just use Angular Material to complete it in about an hour or so.
+
+To make this project more robust I suggest building out the testing framework and creating a better code coverage for testing.
