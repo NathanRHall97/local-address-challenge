@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { AddressBookComponent } from './components/address-book/address-book.component';
 import { AddressCardComponent } from './components/address-card/address-card.component';
 import { AddressDetailsComponent } from './components/address-details/address-details.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

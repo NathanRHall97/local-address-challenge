@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddressDetailsComponent } from './address-details.component';
+import { AddressStore } from 'src/app/resources/address.store';
+import { AddressServices } from 'src/app/resources/address.services';
+import { HttpClientModule } from '@angular/common/http/http';
+import { ResourcesModule } from 'src/app/resources/resources.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 describe('AddressDetailsComponent', () => {
   let component: AddressDetailsComponent;
@@ -8,7 +13,8 @@ describe('AddressDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddressDetailsComponent ]
+      imports: [ ResourcesModule, HttpClientModule, AppRoutingModule ],
+      declarations: [ AddressDetailsComponent ],
     })
     .compileComponents();
   });
