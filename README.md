@@ -1,4 +1,4 @@
-## Address Book Component
+## Address Book Challenge
 
 Created by Nathan R. Hall 2/1/22
 
