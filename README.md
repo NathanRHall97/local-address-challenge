@@ -27,8 +27,7 @@ My overall approach taken for this assingnment was to create an easy to read sca
 - Address Book loaded from API
 - API Data Transformation
 - API Event System
-- Filtering Address Book W/ Form Input
 
 Given more time I would have liked to add some general styling across the site to make it look less HTMLish. I would probably just use Angular Material to complete it in about an hour or so.
 
-To make this project more robust I suggest building out the testing framework and creating a better code coverage for testing.
+To make this project more robust I suggest creating more unit tests and achieving a better code coverage.
