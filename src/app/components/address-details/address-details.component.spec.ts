@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
 import { AddressDetailsComponent } from './address-details.component';
 import { AddressStore } from 'src/app/resources/address.store';
@@ -10,6 +10,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 describe('AddressDetailsComponent', () => {
   let component: AddressDetailsComponent;
   let fixture: ComponentFixture<AddressDetailsComponent>;
+  let testBedStore: AddressStore;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -23,6 +24,7 @@ describe('AddressDetailsComponent', () => {
     fixture = TestBed.createComponent(AddressDetailsComponent);
     component = fixture.componentInstance;
     TestBed.inject(AddressStore);
+    testBedStore = TestBed.get(AddressStore);
 
     component.addressDetails = {
       title: 'Test',
@@ -34,7 +36,12 @@ describe('AddressDetailsComponent', () => {
     fixture.detectChanges();
   });
 
-   it('should create', () => {
+   it('should create address details component', () => {
      expect(component).toBeTruthy();
    });
+   it('should have address store injected', 
+    inject([AddressStore], (injectService: AddressStore) => {
+      expect(injectService).toBe(testBedStore);
+    }) 
+  );
 });

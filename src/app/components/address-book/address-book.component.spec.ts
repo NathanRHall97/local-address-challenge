@@ -31,7 +31,7 @@ describe('AddressBookComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create address book component', () => {
     expect(component).toBeTruthy();
   });
   it('should have address store injected', 

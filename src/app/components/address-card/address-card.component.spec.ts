@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, getTestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, getTestBed, inject } from '@angular/core/testing';
 
 import { AddressCardComponent } from './address-card.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing/testing';
@@ -30,7 +30,7 @@ describe('AddressCardComponent', () => {
       lastName: 'Hall',
       phoneNo: '412-222-2222'
     };
-    
+
     TestBed.inject(AddressStore);
 
     TestBed.inject(AddressStore);
@@ -39,7 +39,12 @@ describe('AddressCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create address card component', () => {
     expect(component).toBeTruthy();
   });
+  it('should have address store injected', 
+    inject([AddressStore], (injectService: AddressStore) => {
+      expect(injectService).toBe(testBedStore);
+    }) 
+  );
 });
